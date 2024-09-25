@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --Yellow-clr: hsl(47, 88%, 63%);
+    --White-clr: hsl(0, 0%, 100%);
+    --Gray-500-clr: hsl(0, 0%, 42%);
+    --Gray-950-clr: hsl(0, 0%, 7%);
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    color: var(--text-clr);
+}
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+    'main'
+    'footer';
+    background-color: var(--Yellow-clr);
+    font-family: "Figtree", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: main;
+}
+.card{
+    display: flex;
+    flex-basis: 400px;
+    flex-direction: column;
+    row-gap: 0.5em;
+    background-color: var(--White-clr);
+    border: 1px solid var(--Gray-950-clr);
+    margin-inline: 2em;
+    padding: 1.5em;
+    border-radius: 20px;
+    box-shadow: 10px 10px var(--Gray-950-clr) ;
+}
+.card__figure{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+.card__figure svg{
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.card__figureCaption-1{
+    width: min-content;
+    padding: 0.3em 1em;
+    font-size: clamp(0.7rem, 0.038rem + 3.31vw, 1rem);
+    font-weight: 800;
+    border-radius: 5px;
+    background-color: var(--Yellow-clr);
+}
+.card__figureCaption-2{
+    font-size: clamp(0.7rem, 0.038rem + 3.31vw, 1rem);
+}
+.h1{
+    font-size: clamp(1rem, 0.091rem + 4.848vw, 1.5rem);
+    font-weight: 800;
+    color: var(--Gray-950-clr);
+}
+.p{
+    color: var(--Gray-500-clr);
+    font-size: clamp(0.7rem, 0.038rem + 3.31vw, 1rem);
+}
+.divAvatar{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 1em;
+
+    & img{
+        width: 32px;
+    }
+
+    & p{
+        font-size: 1em;
+        font-weight: 800;
+    }
+}
+#footer{
+    grid-area: footer;
+}
+.attribution {
+    margin-inline: min(7%);
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+}
